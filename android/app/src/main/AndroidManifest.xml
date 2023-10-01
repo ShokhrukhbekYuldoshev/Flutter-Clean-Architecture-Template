@@ -5,7 +5,7 @@
 
 
     <application
-        android:label="flutter_starter_app"
+        android:label="flutter_clean_architecture_template"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
