@@ -1,4 +1,4 @@
-# Project Name
+# Flutter Clean Architecture Template
 
 This is a Flutter project that uses clean architecture, dependency injection with GetIt, and functional programming with Dartz. The state management is handled with BLoC pattern.
 
@@ -13,10 +13,21 @@ The project is structured as follows:
 
     -   `core`: contains the core functionality of the application.
 
-        -   `network`: contains the `NetworkInfo` class that provides information about the network status.
-        -   `utils`: contains the `InputConverter` class that converts user input to the desired format.
-        -   `errors`: contains the `Failure` class hierarchy that represents the possible failures in the application.
-        -   `di`: contains the `Injector` class that sets up the dependency injection with GetIt.
+        -   `constants`: contains the constants of the application.
+            -   `assets.dart`: contains the assets of the application.
+        -   `di/injector.dart`: contains the `Injector` class that sets up the dependency injection with GetIt.
+        -   `errors/failures.dart`: contains the `Failure` class hierarchy that represents the possible failures in the
+        -   `extensions`: contains the extensions of the application. - `string_extensions`: contains the `StringExtensions` extension that provides string manipulation methods.
+            application.
+        -   `network`:
+            -   `network_info.dart`: contains the `NetworkInfo` class that checks the network connectivity of the application.
+        -   `router/app_router.dart`: contains the `AppRouter` class that defines the routes of the application.
+        -   `themes`: contains the themes of the application.
+
+            -   `app_theme.dart`: contains the `AppTheme` class that defines the theme of the application.
+
+        -   `utils`: contains the utility classes of the application.
+            -   `input_converter.dart`: contains the `InputConverter` class that converts the input of the application.
 
     -   `features`: contains the features of the application.
         -   `feature_a`: an example feature.
@@ -43,21 +54,5 @@ The project is structured as follows:
 To get started with the project, follow these steps:
 
 1. Clone the repository.
-2. Run `flutter pub get` to install the dependencies.
+2. Run `dart pub get` to install the dependencies.
 3. Run the application with `flutter run`.
-
-## Commands Used
-
-[Dart: Generate Documentation](command:dart.task.dartdoc)
-[Flutter: Generate Localizations](command:flutter.task.genl10n)
-[Flutter: Clean Project](command:flutter.clean)
-[Dart: New Project](command:dart.createProject)
-[Flutter: New Project](command:flutter.createProject)
-
-## Settings Used
-
--   `dart.debugExternalPackageLibraries`: Whether to mark external pub package libraries (including `package:flutter`) as debuggable, enabling stepping into them while debugging.
--   `dart.allowTestsOutsideTestFolder`: Whether to consider files ending `_test.dart` that are outside of the test directory as tests. This should be enabled if you put tests inside the `lib` directory of your Flutter app so they will be run with `flutter test` and not `flutter run`.
--   `dart.debugSdkLibraries`: Whether to mark Dart SDK libraries (`dart:*`) as debuggable, enabling stepping into them while debugging.
--   `dart.offline`: Whether to use the --offline switch for commands like 'pub get' and 'Flutter: New Project'.
--   `dart.flutterSdkPath`: The location of the Flutter SDK to use. If blank (or not a valid SDK), Dart Code will attempt to find it from the project directory, `FLUTTER_ROOT` environment variable and the `PATH` environment variable.
