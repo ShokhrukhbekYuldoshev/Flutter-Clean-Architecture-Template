@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_starter_app/core/di/injector.dart';
 
+import 'core/di/injector.dart';
 import 'core/router/app_router.dart';
 import 'core/themes/app_theme.dart';
 
